@@ -7,3 +7,8 @@ services:
     volumes:
       - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
     command: ["--config=/etc/otel-collector-config.yaml"]
+
+networks:
+  default:
+    external: true
+    name: observability
